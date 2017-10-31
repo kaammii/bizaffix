@@ -65,7 +65,6 @@ class Navigation extends Component {
                                             <div className="nav-main-title visible-xs">
                                                 <a href="index.html">
                                                     <img src="assets/img/logo-blue.png" alt="Realsite" />
-
                                                     Bizaffix
                                                 </a>
                                             </div>
@@ -263,14 +262,15 @@ class Navigation extends Component {
                     <div className="row">
                         <div className="content col-sm-8 col-md-9">                                
                             <div className="row">
-                                <div className="col-sm-6 col-md-4">
+                                {this.state.data.map((item,k)=>
+                                <div className="col-sm-6 col-md-4" key={k} >
                                     <div className="property-box">
                                         <div className="property-box-image">
                                             <a href="headers-call-to-action.html#">
                                                 <img src="http://bootstrapsale.com/projects/roost/v1-0/img/demo/listing/thumbs/2.jpg" alt=""/>
 
                                                 <span className="property-box-excerpt">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ipsum nibh. Vivamus vehicula consequat justo, id molestie nisl feugiat dignissim. Nam a blandit leo, a porta nisl.
+                                                    {item.cardText}
                                                 </span>
                                             </a>
                                         </div>
@@ -305,221 +305,7 @@ class Navigation extends Component {
                                         </div>
                                     </div>
                                 </div>
-
-                                <div className="col-sm-6 col-md-4">
-                                    <div className="property-box">
-                                        <div className="property-box-image">
-                                            <a href="headers-call-to-action.html#">
-                                                <img src="assets/img/tmp/medium/2.jpg" alt="" />
-
-                                                <span className="property-box-excerpt">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ipsum nibh. Vivamus vehicula consequat justo, id molestie nisl feugiat dignissim. Nam a blandit leo, a porta nisl.
-                                                </span>
-                                            </a>
-                                        </div>
-
-                                        <div className="property-box-content">
-                                            <div className="property-box-meta">
-                                                <div className="property-box-meta-item">
-                                                    <span>Baths</span>
-                                                    <strong>2</strong>
-                                                </div>
-
-                                                <div className="property-box-meta-item">
-                                                    <span>Beds</span>
-                                                    <strong>4</strong>
-                                                </div>
-
-                                                <div className="property-box-meta-item">
-                                                    <span>Garages</span>
-                                                    <strong>1</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="property-box-bottom">
-                                            <div className="property-box-price">
-                                                $ 17,000
-                                            </div>
-
-                                            <a href="headers-call-to-action.html#" className="property-box-view">
-                                                View Detail
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-6 col-md-4">
-                                    <div className="property-box">
-                                        <div className="property-box-image">
-                                            <a href="headers-call-to-action.html#">
-                                                <img src="assets/img/tmp/medium/3.jpg" alt="" />
-
-                                                <span className="property-box-excerpt">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ipsum nibh. Vivamus vehicula consequat justo, id molestie nisl feugiat dignissim. Nam a blandit leo, a porta nisl.
-                                                </span>
-                                            </a>
-                                        </div>
-
-                                        <div className="property-box-content">
-                                            <div className="property-box-meta">
-                                                <div className="property-box-meta-item">
-                                                    <span>Baths</span>
-                                                    <strong>2</strong>
-                                                </div>
-
-                                                <div className="property-box-meta-item">
-                                                    <span>Beds</span>
-                                                    <strong>4</strong>
-                                                </div>
-
-                                                <div className="property-box-meta-item">
-                                                    <span>Garages</span>
-                                                    <strong>1</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="property-box-bottom">
-                                            <div className="property-box-price">
-                                                $ 17,000
-                                            </div>
-
-                                            <a href="headers-call-to-action.html#" className="property-box-view">
-                                                View Detail
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-6 col-md-4">
-                                    <div className="property-box">
-                                        <div className="property-box-image">
-                                            <a href="headers-call-to-action.html#">
-                                                <img src="assets/img/tmp/medium/4.jpg" alt=""/>
-
-                                                <span className="property-box-excerpt">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ipsum nibh. Vivamus vehicula consequat justo, id molestie nisl feugiat dignissim. Nam a blandit leo, a porta nisl.
-                                                </span>
-                                            </a>
-                                        </div>
-
-                                        <div className="property-box-content">
-                                            <div className="property-box-meta">
-                                                <div className="property-box-meta-item">
-                                                    <span>Baths</span>
-                                                    <strong>2</strong>
-                                                </div>
-
-                                                <div className="property-box-meta-item">
-                                                    <span>Beds</span>
-                                                    <strong>4</strong>
-                                                </div>
-
-                                                <div className="property-box-meta-item">
-                                                    <span>Garages</span>
-                                                    <strong>1</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="property-box-bottom">
-                                            <div className="property-box-price">
-                                                $ 17,000
-                                            </div>
-
-                                            <a href="headers-call-to-action.html#" className="property-box-view">
-                                                View Detail
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-6 col-md-4">
-                                    <div className="property-box">
-                                        <div className="property-box-image">
-                                            <a href="headers-call-to-action.html#">
-                                                <img src="assets/img/tmp/medium/5.jpg" alt=""/>
-
-                                                <span className="property-box-excerpt">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ipsum nibh. Vivamus vehicula consequat justo, id molestie nisl feugiat dignissim. Nam a blandit leo, a porta nisl.
-                                                </span>
-                                            </a>
-                                        </div>
-
-                                        <div className="property-box-content">
-                                            <div className="property-box-meta">
-                                                <div className="property-box-meta-item">
-                                                    <span>Baths</span>
-                                                    <strong>2</strong>
-                                                </div>
-
-                                                <div className="property-box-meta-item">
-                                                    <span>Beds</span>
-                                                    <strong>4</strong>
-                                                </div>
-
-                                                <div className="property-box-meta-item">
-                                                    <span>Garages</span>
-                                                    <strong>1</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="property-box-bottom">
-                                            <div className="property-box-price">
-                                                $ 17,000
-                                            </div>
-
-                                            <a href="headers-call-to-action.html#" className="property-box-view">
-                                                View Detail
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-6 col-md-4">
-                                    <div className="property-box">
-                                        <div className="property-box-image">
-                                            <a href="headers-call-to-action.html#">
-                                                <img src="assets/img/tmp/medium/6.jpg" alt=""/>
-
-                                                <span className="property-box-excerpt">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ipsum nibh. Vivamus vehicula consequat justo, id molestie nisl feugiat dignissim. Nam a blandit leo, a porta nisl.
-                                                </span>
-                                            </a>
-                                        </div>
-
-                                        <div className="property-box-content">
-                                            <div className="property-box-meta">
-                                                <div className="property-box-meta-item">
-                                                    <span>Baths</span>
-                                                    <strong>2</strong>
-                                                </div>
-
-                                                <div className="property-box-meta-item">
-                                                    <span>Beds</span>
-                                                    <strong>4</strong>
-                                                </div>
-
-                                                <div className="property-box-meta-item">
-                                                    <span>Garages</span>
-                                                    <strong>1</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="property-box-bottom">
-                                            <div className="property-box-price">
-                                                $ 17,000
-                                            </div>
-
-                                            <a href="headers-call-to-action.html#" className="property-box-view">
-                                                View Detail
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                )}
                             </div>
 
                             <div className="promotion">
@@ -537,6 +323,7 @@ class Navigation extends Component {
 
                             <div className="property-carousel-wrapper">
                                 <div className="property-carousel">
+                                    {this.state.data.map((item,k)=>
                                     <div className="property-carousel-item">
                                         <div className="property-simple">
                                             <a href="headers-call-to-action.html#" className="property-simple-image">
@@ -557,154 +344,7 @@ class Navigation extends Component {
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div className="property-carousel-item">
-                                        <div className="property-simple">
-                                            <a href="headers-call-to-action.html#" className="property-simple-image">
-                                                <img src="http://bootstrapsale.com/projects/roost/v1-0/img/demo/listing/thumbs/2.jpg" alt=""/>
-                                            </a>
-
-                                            <div className="property-simple-content">
-                                                <h2 className="property-simple-title"><a href="headers-call-to-action.html#">Old Leaf Quay</a></h2>
-
-                                                <ul className="property-simple-location">
-                                                    <li><a href="headers-call-to-action.html#">New York</a>,</li>
-                                                    <li><a href="headers-call-to-action.html#">Brooklyn</a></li>
-                                                </ul>
-
-                                                <div className="property-simple-status">
-                                                    Price decreased by <strong className="green">-4%</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="property-carousel-item">
-                                        <div className="property-simple">
-                                            <a href="headers-call-to-action.html#" className="property-simple-image">
-                                                <img src="assets/img/tmp/medium/4.jpg" alt=""/>
-                                            </a>
-
-                                            <div className="property-simple-content">
-                                                <h2 className="property-simple-title"><a href="headers-call-to-action.html#">Old Leaf Quay</a></h2>
-
-                                                <ul className="property-simple-location">
-                                                    <li><a href="headers-call-to-action.html#">New York</a>,</li>
-                                                    <li><a href="headers-call-to-action.html#">Brooklyn</a></li>
-                                                </ul>
-
-                                                <div className="property-simple-status">
-                                                    Price decreased by <strong className="green">-4%</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="property-carousel-item">
-                                        <div className="property-simple">
-                                            <a href="headers-call-to-action.html#" className="property-simple-image">
-                                                <img src="assets/img/tmp/medium/3.jpg" alt=""/>
-                                            </a>
-
-                                            <div className="property-simple-content">
-                                                <h2 className="property-simple-title"><a href="headers-call-to-action.html#">Old Leaf Quay</a></h2>
-
-                                                <ul className="property-simple-location">
-                                                    <li><a href="headers-call-to-action.html#">New York</a>,</li>
-                                                    <li><a href="headers-call-to-action.html#">Brooklyn</a></li>
-                                                </ul>
-
-                                                <div className="property-simple-status">
-                                                    Price decreased by <strong className="green">-4%</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="property-carousel-item">
-                                        <div className="property-simple">
-                                            <a href="headers-call-to-action.html#" className="property-simple-image">
-                                                <img src="assets/img/tmp/medium/2.jpg" alt=""/>
-                                            </a>
-
-                                            <div className="property-simple-content">
-                                                <h2 className="property-simple-title"><a href="headers-call-to-action.html#">Old Leaf Quay</a></h2>
-
-                                                <ul className="property-simple-location">
-                                                    <li><a href="headers-call-to-action.html#">New York</a>,</li>
-                                                    <li><a href="headers-call-to-action.html#">Brooklyn</a></li>
-                                                </ul>
-
-                                                <div className="property-simple-status">
-                                                    Price decreased by <strong className="green">-4%</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="property-carousel-item">
-                                        <div className="property-simple">
-                                            <a href="headers-call-to-action.html#" className="property-simple-image">
-                                                <img src="assets/img/tmp/medium/1.jpg" alt=""/>
-                                            </a>
-
-                                            <div className="property-simple-content">
-                                                <h2 className="property-simple-title"><a href="headers-call-to-action.html#">Old Leaf Quay</a></h2>
-
-                                                <ul className="property-simple-location">
-                                                    <li><a href="headers-call-to-action.html#">New York</a>,</li>
-                                                    <li><a href="headers-call-to-action.html#">Brooklyn</a></li>
-                                                </ul>
-
-                                                <div className="property-simple-status">
-                                                    Price decreased by <strong className="green">-4%</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="property-carousel-item">
-                                        <div className="property-simple">
-                                            <a href="headers-call-to-action.html#" className="property-simple-image">
-                                                <img src="assets/img/tmp/medium/6.jpg" alt=""/>
-                                            </a>
-
-                                            <div className="property-simple-content">
-                                                <h2 className="property-simple-title"><a href="headers-call-to-action.html#">Old Leaf Quay</a></h2>
-
-                                                <ul className="property-simple-location">
-                                                    <li><a href="headers-call-to-action.html#">New York</a>,</li>
-                                                    <li><a href="headers-call-to-action.html#">Brooklyn</a></li>
-                                                </ul>
-
-                                                <div className="property-simple-status">
-                                                    Price decreased by <strong className="green">-4%</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="property-carousel-item">
-                                        <div className="property-simple">
-                                            <a href="headers-call-to-action.html#" className="property-simple-image">
-                                                <img src="assets/img/tmp/medium/5.jpg" alt=""/>
-                                            </a>
-
-                                            <div className="property-simple-content">
-                                                <h2 className="property-simple-title"><a href="headers-call-to-action.html#">Old Leaf Quay</a></h2>
-
-                                                <ul className="property-simple-location">
-                                                    <li><a href="headers-call-to-action.html#">New York</a>,</li>
-                                                    <li><a href="headers-call-to-action.html#">Brooklyn</a></li>
-                                                </ul>
-
-                                                <div className="property-simple-status">
-                                                    Price decreased by <strong className="green">-4%</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    )}
                                 </div>
                             </div>
 
@@ -991,11 +631,11 @@ class Navigation extends Component {
                 <div className="container">
                     <div className="footer-bottom-inner">
                         <div className="footer-bottom-left">
-                            &copy; 2015 Realsite - Material Real Estate Template. All rights reserved.
+                            &copy; 2017 Bizaffix. All rights reserved.
                         </div>
 
                         <div className="footer-bottom-right">
-                            Created by <a href="http://byaviators.com">Aviators</a>
+                            Created by <a href="http://www.github.com/kamran1122" target="_blank" >Kamran Nazir</a>
                         </div>
                     </div>
                 </div>
