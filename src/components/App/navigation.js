@@ -968,6 +968,39 @@ class Navigation extends Component {
                     
                 </div>
             </div>
+            <div id="footer" className="footer">
+            <div className="footer-top">
+                <div className="container">
+                    <div className="footer-top-inner">
+                        <nav>
+                            <ul className="nav nav-pills">
+                                <li><a href="headers-call-to-action.html#">Home</a></li>
+                                <li><a href="headers-call-to-action.html#">Properties</a></li>
+                                <li><a href="headers-call-to-action.html#">Agencies</a></li>
+                                <li><a href="headers-call-to-action.html#">Agents</a></li>
+                                <li><a href="headers-call-to-action.html#">Pricing</a></li>
+                                <li><a href="headers-call-to-action.html#">Blog</a></li>
+                                <li><a href="headers-call-to-action.html#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div className="footer-bottom">
+                <div className="container">
+                    <div className="footer-bottom-inner">
+                        <div className="footer-bottom-left">
+                            &copy; 2015 Realsite - Material Real Estate Template. All rights reserved.
+                        </div>
+
+                        <div className="footer-bottom-right">
+                            Created by <a href="http://byaviators.com">Aviators</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>   
         );
     }
