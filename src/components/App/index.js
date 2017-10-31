@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import Navigation from './navigation';
 
 
-class Index extends Component {
+class App extends Component {
     constructor(props) {
         super(props);
     }
@@ -16,4 +16,4 @@ class Index extends Component {
     }
 }
 
-export default Index;
+export default App;

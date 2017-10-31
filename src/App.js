@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import Index from './components/Index';
-
+import AppRoutes from './config/AppRoutes';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {Provider} from 'react-redux';
+import {store} from './store/index';
 class App extends Component {
   render() {
     return (
-      <div>
-        <Index />
-      </div>
+      <Provider store={store}>
+      	<MuiThemeProvider>
+      		<AppRoutes />
+      	</MuiThemeProvider>
+      </Provider>
     );
   }
 }
