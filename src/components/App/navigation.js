@@ -1,8 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import SearchBar from 'material-ui-search-bar';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-import {Paper} from 'material-ui';
 
 class Navigation extends Component {
     constructor(props) {
@@ -36,7 +34,8 @@ class Navigation extends Component {
                 {
                     cardText: 'some random text.'
                 },
-            ]
+            ],
+            dataSource: []
         }
     }
 
@@ -212,8 +211,10 @@ class Navigation extends Component {
                             <div className="header-call-to-action">
                                 <h1>Bizaffix Material Design Template</h1>
                                 <SearchBar
-                                  onChange={() => console.log('onChange')}
+                                  dataSource={this.state.dataSource}
+                                  onChange={(value) => this.setState({dataSource: [ value, value+value, value+value+value]})}
                                   onRequestSearch={() => console.log('onRequestSearch')}
+                                  hintText=""
                                   placeholder="What are you looking for?"
                                   style={{
                                     margin: '0 auto',
@@ -324,7 +325,7 @@ class Navigation extends Component {
                             <div className="property-carousel-wrapper">
                                 <div className="property-carousel">
                                     {this.state.data.map((item,k)=>
-                                    <div className="property-carousel-item">
+                                    <div className="property-carousel-item" key={k} >
                                         <div className="property-simple">
                                             <a href="headers-call-to-action.html#" className="property-simple-image">
                                                 <img src="http://bootstrapsale.com/projects/roost/v1-0/img/demo/listing/thumbs/2.jpg" alt=""/>
