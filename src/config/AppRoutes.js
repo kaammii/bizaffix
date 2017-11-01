@@ -6,12 +6,15 @@ import {
 } from 'react-router-dom'
 
 import {
-  App
+  App,
+  Layout,
+  Detail
 } from '../components/Index';
 
 const ParentApp = () => (
   <div>
-    <Route exact path="/" component={App} />
+    <Route exact path="/" component={Layout} />
+    <Route exact path="/detail" component={Detail} />
     {/* App routing goes here!! */}
     
   </div>
@@ -25,11 +28,13 @@ const AppRoutes = () => {
   )
 };
 
-export const DashboardRoute = () => {
+export const PageRoutes = () => {
 
   {/* Dashboard routing goes here!! */ }
   return (
     <Switch>
+      
+      <Route path="/detail" component={Detail} />
     </Switch>
   )
 }

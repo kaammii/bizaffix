@@ -1,7 +1,5 @@
 import React, { Component} from 'react';
-import Navigation from './navigation';
-
-
+import PageRoutes from '../../config/AppRoutes';
 class App extends Component {
     constructor(props) {
         super(props);
@@ -10,7 +8,7 @@ class App extends Component {
     render() {
         return (
         	<div className="page-wrapper">
-				<Navigation />
+				<PageRoutes />
         	</div>
         );
     }
