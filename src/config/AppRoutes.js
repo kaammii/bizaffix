@@ -13,7 +13,7 @@ import {
 
 const ParentApp = () => (
   <div>
-    <Route exact path="/" component={Layout} />
+    <Route exact path="/" component={Layout} {...this.props}/>
     <Route exact path="/detail" component={Detail} />
     {/* App routing goes here!! */}
     

@@ -11,6 +11,7 @@ class Layout extends Component {
     }
 
     render() {
+        console.log(this.props)
         return (
         <div className="page-wrapper" >
             <div className="header header-standard header-call-to-action-wrapper">
@@ -162,7 +163,7 @@ class Layout extends Component {
 
                                     <div className="widget-content">
                                         <ul className="menu">
-                                            <li><a href="headers-call-to-action.html#">Properties</a></li>
+                                            <li><a href="javascript:void" onClick={()=>this.props.history.push('/detail')} >Properties</a></li>
                                             <li><a href="headers-call-to-action.html#">Features</a></li>
                                             <li><a href="headers-call-to-action.html#">Agents</a></li>
                                             <li><a href="headers-call-to-action.html#">Blog</a></li>
@@ -287,7 +288,7 @@ class Layout extends Component {
                             </div>
 
                             <div className="footer-bottom-right">
-                                Created by <a href="http://www.github.com/kamran1122" target="_blank" >Kamran Nazir</a>
+                                Created with <i className="fa fa-heart"></i> by <a href="http://www.github.com/kamran1122" target="_blank" >Kamran Nazir</a>
                             </div>
                         </div>
                     </div>

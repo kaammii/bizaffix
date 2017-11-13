@@ -1,11 +1,35 @@
 import React, { Component } from 'react';
+import {Dialog, FlatButton, TextField, RaisedButton} from 'material-ui';
+
+const Styles = {
+    textFieldColor: {color: 'rgba(33, 150, 243, 0.85)'},
+    underlineColor: {borderColor: 'rgba(33, 150, 243, 0.85)'}
+}
 
 class Navigation extends Component {
     constructor(props) {
         super(props);
+        this.state={
+            signUpOpen: false,
+            signInOpen: false
+        }
     }
-
     render() {
+        const matches = window.matchMedia('(min-width: 767px)').matches;
+        const modalWidth = matches ? {width: '30%'} : {width: '80%'}
+        const actions = [
+          <FlatButton
+            label="Cancel"
+            primary={true}
+            onClick={this.handleClose}
+          />,
+          <FlatButton
+            label="Submit"
+            primary={true}
+            disabled={true}
+            onClick={this.handleClose}
+          />,
+        ];
         return (
             <div className=""  style={{marginTop: '2%'}}>
                 <div className="header-main">
@@ -30,10 +54,10 @@ class Navigation extends Component {
                                 <nav>
                                     <ul id="nav-main" className="nav nav-pills">
                                         <li className="has-children ">
-                                            <a href="headers-call-to-action.html#">Properties <i className="fa fa-caret-down"></i></a>
+                                            <a href="headers-call-to-action.html#">Products <i className="fa fa-caret-down"></i></a>
 
                                             <div>
-                                                <a href="headers-call-to-action.html#">Properties <i className="fa fa-caret-down"></i></a>
+                                                <a href="headers-call-to-action.html#">Products <i className="fa fa-caret-down"></i></a>
 
                                                 <ul className="sub-menu">
                                                     <li><a href="properties-detail.html">Detail Page</a></li>
@@ -51,13 +75,13 @@ class Navigation extends Component {
                                         </li>
 
                                         <li className="has-children ">
-                                            <a href="headers-call-to-action.html#">Agents <i className="fa fa-caret-down"></i></a>
+                                            <a href="headers-call-to-action.html#">Businesses <i className="fa fa-caret-down"></i></a>
 
                                             <div>
-                                                <a href="headers-call-to-action.html#">Agents <i className="fa fa-caret-down"></i></a>
+                                                <a href="headers-call-to-action.html#">Businesses <i className="fa fa-caret-down"></i></a>
 
                                                 <ul className="sub-menu">
-                                                    <li><a className="subtitle">Agent</a></li>
+                                                    <li><a className="subtitle">Businesses </a></li>
                                                     <li><a href="agents-detail.html">Detail</a></li>
                                                     <li><a href="agents-row.html">Listing Row</a></li>
                                                     <li><a href="agents-large.html">Listing Large</a></li>
@@ -69,11 +93,11 @@ class Navigation extends Component {
                                             </div>
                                         </li>
 
-                                        <li className="has-children  active ">
-                                            <a href="headers-call-to-action.html#">Variants <i className="fa fa-caret-down"></i></a>
+                                        <li className="has-children">
+                                            <a href="headers-call-to-action.html#">Blog <i className="fa fa-caret-down"></i></a>
 
                                             <div>
-                                                <a href="headers-call-to-action.html#">Variants <i className="fa fa-caret-down"></i></a>
+                                                <a href="headers-call-to-action.html#">Blog <i className="fa fa-caret-down"></i></a>
 
                                                 <ul className="sub-menu">
                                                     <li className="has-children">
@@ -108,48 +132,49 @@ class Navigation extends Component {
                                             </div>
                                         </li>
 
-                                        <li className="has-children ">
-                                            <a href="headers-call-to-action.html#">Pages <i className="fa fa-caret-down"></i></a>
+                                        <li className="important ">
+                                            <a href="javascript:void" onClick={()=>this.setState({signInOpen: true})} >Login</a>
+                                            {
+                                            // <div>
+                                            //     <a href="headers-call-to-action.html#">Login <i className="fa fa-caret-down"></i></a>
 
-                                            <div>
-                                                <a href="headers-call-to-action.html#">Pages <i className="fa fa-caret-down"></i></a>
-
-                                                <ul className="sub-menu">
-                                                    <li><a href="pages-grid.html">Grid System</a></li>
-                                                    <li><a href="contact.html">Contact</a></li>
-                                                    <li><a href="pages-faq.html">FAQ</a></li>
-                                                    <li><a href="pages-ad-spaces.html">Ad Spaces</a></li>
-                                                    <li><a href="pages-notifications.html">Notifications</a></li>
-                                                    <li><a href="pages-pricing.html">Pricing</a></li>
-                                                    <li><a href="pages-login.html">Login Form</a></li>
-                                                    <li><a href="pages-register.html">Register Form</a></li>
-                                                    <li><a href="pages-invoice.html">Invoice Template</a></li>
-                                                    <li><a href="pages-change-password.html">Change Password</a></li>
-                                                    <li><a href="pages-terms-and-conditions.html">Terms &amp; Conditions</a></li>
-                                                    <li><a href="pages-styles.html">Page Styles</a></li>
-                                                    <li><a href="pages-features.html">Features</a></li>
-                                                    <li><a href="pages-404.html">404 - Not Found</a></li>
-                                                    <li><a href="pages-500.html">500 - Internal Error</a></li>
-                                                </ul>
-                                            </div>
+                                            //     <ul className="sub-menu">
+                                            //         <li><a href="pages-grid.html">Grid System</a></li>
+                                            //         <li><a href="contact.html">Contact</a></li>
+                                            //         <li><a href="pages-faq.html">FAQ</a></li>
+                                            //         <li><a href="pages-ad-spaces.html">Ad Spaces</a></li>
+                                            //         <li><a href="pages-notifications.html">Notifications</a></li>
+                                            //         <li><a href="pages-pricing.html">Pricing</a></li>
+                                            //         <li><a href="pages-login.html">Login Form</a></li>
+                                            //         <li><a href="pages-register.html">Register Form</a></li>
+                                            //         <li><a href="pages-invoice.html">Invoice Template</a></li>
+                                            //         <li><a href="pages-change-password.html">Change Password</a></li>
+                                            //         <li><a href="pages-terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                                            //         <li><a href="pages-styles.html">Page Styles</a></li>
+                                            //         <li><a href="pages-features.html">Features</a></li>
+                                            //         <li><a href="pages-404.html">404 - Not Found</a></li>
+                                            //         <li><a href="pages-500.html">500 - Internal Error</a></li>
+                                            //     </ul>
+                                            // </div>
+                                            }
                                         </li>
+                                        {
+                                        // <li className="has-children ">
+                                        //     <a href="headers-call-to-action.html#">Blog <i className="fa fa-caret-down"></i></a>
 
-                                        <li className="has-children ">
-                                            <a href="headers-call-to-action.html#">Blog <i className="fa fa-caret-down"></i></a>
+                                        //     <div>
+                                        //         <a href="headers-call-to-action.html#">Blog <i className="fa fa-caret-down"></i></a>
 
-                                            <div>
-                                                <a href="headers-call-to-action.html#">Blog <i className="fa fa-caret-down"></i></a>
-
-                                                <ul className="sub-menu">
-                                                    <li><a href="blog-index.html">Listing Right Sidebar</a></li>
-                                                    <li><a href="blog-index-left.html">Listing Left Sidebar</a></li>
-                                                    <li><a href="blog-detail.html">Detail Page</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-
+                                        //         <ul className="sub-menu">
+                                        //             <li><a href="blog-index.html">Listing Right Sidebar</a></li>
+                                        //             <li><a href="blog-index-left.html">Listing Left Sidebar</a></li>
+                                        //             <li><a href="blog-detail.html">Detail Page</a></li>
+                                        //         </ul>
+                                        //     </div>
+                                        // </li>
+                                        }
                                         <li className="important">
-                                            <a href="admin-login.html">Admin</a>
+                                            <a href="javascript:void" onClick={()=>this.setState({signUpOpen: true})} >Sign Up</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -162,6 +187,45 @@ class Navigation extends Component {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
+                        <Dialog
+                          title="Sign Up"
+                          modal={true}
+                          open={this.state.signUpOpen}
+                          contentStyle={modalWidth}
+                        >
+                          <TextField
+                          floatingLabelText="Full Name"
+                          fullWidth={true}
+                          /><br />
+                          <TextField
+                          floatingLabelText="Email"
+                          fullWidth={true}
+                          /><br />
+                          <TextField
+                          floatingLabelText="Password"
+                          fullWidth={true}
+                          /><br /><br />
+                          <RaisedButton label="Sign Up" primary={true} fullWidth={true} /><br /><br />
+                          <RaisedButton label="Cancel" onClick={()=> this.setState({signUpOpen: false})} fullWidth={true} />
+                        </Dialog>
+
+                        <Dialog
+                          title="Login"
+                          modal={true}
+                          open={this.state.signInOpen}
+                          contentStyle={modalWidth}
+                        >
+                          <TextField
+                          floatingLabelText="Email"
+                          fullWidth={true}
+                          /><br />
+                          <TextField
+                          floatingLabelText="Password"
+                          fullWidth={true}
+                          /><br /><br />
+                          <RaisedButton label="Login" primary={true} fullWidth={true} /><br /><br />
+                          <RaisedButton label="Cancel" onClick={()=> this.setState({signInOpen: false})} fullWidth={true} />
+                        </Dialog>
                     </div>
                 </div>
             </div>

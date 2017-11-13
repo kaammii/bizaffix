@@ -25,9 +25,9 @@ class Jumbotron extends Component {
                   }}
                 />
                 <div className="buttons">
-                    <a href="headers-call-to-action.html#" className="btn btn-lg">The agents</a>
-                    <a href="headers-call-to-action.html#" className="btn btn-lg">The agencies</a>
-                    <a href="headers-call-to-action.html#" className="btn btn-lg">The users</a>
+                    <a href="headers-call-to-action.html#" className="btn btn-lg">Products</a>
+                    <a href="headers-call-to-action.html#" className="btn btn-lg">Businesses</a>
+                    <a href="headers-call-to-action.html#" className="btn btn-lg">Blog</a>
                 </div>
             </div>
         );
